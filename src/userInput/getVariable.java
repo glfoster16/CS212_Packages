@@ -327,5 +327,50 @@ public class getVariable {
         return scanner.nextFloat();
     }
 
+    /**
+     * Reads the next line from console
+     * @return The input as a string
+     */
+    public static String getString(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
+    /**
+     * Reads the next line from console
+     * @return The input as an integer
+     */
+    public static int getInt(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    /**
+     * Reads the next line from console
+     * @return The input as a double
+     */
+    public static double getDouble(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
+
+    /**
+     * Reads the next line from console
+     * @return The input as a long
+     */
+    public static long getLong(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLong();
+    }
+
+    /**
+     * Reads the next line from console
+     * @return The input as a float
+     */
+    public static float getFloat(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextFloat();
+    }
+
 
 }
