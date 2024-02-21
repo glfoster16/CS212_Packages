@@ -125,7 +125,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a double
      */
-    public static double getSafeDouble(int lowerBound, int upperBound){
+    public static double getSafeDouble(double lowerBound, double upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -169,7 +169,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a double
      */
-    public static double getSafeDouble(String promptText, int lowerBound, int upperBound){
+    public static double getSafeDouble(String promptText, double lowerBound, double upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -317,7 +317,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a float
      */
-    public static float getSafeFloat(int lowerBound, int upperBound){
+    public static float getSafeFloat(double lowerBound, double upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -361,7 +361,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a float
      */
-    public static float getSafeFloat(String promptText, int lowerBound, int upperBound){
+    public static float getSafeFloat(String promptText, double lowerBound, double upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -803,8 +803,6 @@ public class getVariable {
 
         return scanner.nextLine();
     }
-
-
 
 
 }
