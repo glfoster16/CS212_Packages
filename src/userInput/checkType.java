@@ -28,7 +28,7 @@ public class checkType {
      */
     public static boolean isInt(String input){
         try {
-            double test = Integer.parseInt(input);
+            int test = Integer.parseInt(input);
             return true;
         } catch (NumberFormatException e){
             return false;
@@ -42,7 +42,7 @@ public class checkType {
      */
     public static boolean isLong(String input){
         try {
-            double test = Long.parseLong(input);
+            long test = Long.parseLong(input);
             return true;
         } catch (NumberFormatException e){
             return false;
@@ -56,7 +56,7 @@ public class checkType {
      */
     public static boolean isFloat(String input){
         try {
-            double test = Float.parseFloat(input);
+            float test = Float.parseFloat(input);
             return true;
         } catch (NumberFormatException e){
             return false;
