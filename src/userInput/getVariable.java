@@ -43,7 +43,7 @@ public class getVariable {
             String input = scanner.nextLine();
 
             while (!checkType.isDouble(input)) {
-                System.out.println("Please only enter a number.");
+                System.out.println("Please only enter a " + sign + " number.");
                 System.out.println("Try again.");
                 input = scanner.nextLine();
             }
@@ -108,7 +108,7 @@ public class getVariable {
             String input = scanner.nextLine();
 
             while (!checkType.isInt(input)) {
-                System.out.println("Please only enter a whole number.");
+                System.out.println("Please only enter a " + sign + " number.");
                 System.out.println("Try again.");
                 input = scanner.nextLine();
             }
@@ -172,7 +172,7 @@ public class getVariable {
             String input = scanner.nextLine();
 
             while (!checkType.isDouble(input)) {
-                System.out.println("Please only enter a whole number.");
+                System.out.println("Please only enter a " + sign + " number.");
                 System.out.println("Try again.");
                 input = scanner.nextLine();
             }
@@ -237,7 +237,7 @@ public class getVariable {
             String input = scanner.nextLine();
 
             while (!checkType.isDouble(input)) {
-                System.out.println("Please only enter a number.");
+                System.out.println("Please only enter a " + sign + " number.");
                 System.out.println("Try again.");
                 input = scanner.nextLine();
             }
