@@ -102,37 +102,18 @@ public class getVariable {
             double number = Double.parseDouble(input);
 
             if (sign.equals(POSITIVE)) {
-                if (includeZero) {
-                    if (0 > number) {
-                        System.out.println("Please only enter a positive number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
                 } else {
-                    if (0 >= number) {
-                        System.out.println("Please only enter a positive non-zero number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
                 }
             } else if (sign.equals(NEGATIVE)) {
-                if (includeZero) {
-                    if (0 < number) {
-                        System.out.println("Please only enter a negative number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
-                }
-                else{
-                    if (0 <= number) {
-                        System.out.println("Please only enter a negative non-zero number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
                 }
             }
         }
@@ -312,37 +293,18 @@ public class getVariable {
             float number = Float.parseFloat(input);
 
             if (sign.equals(POSITIVE)) {
-                if (includeZero) {
-                    if (0 > number) {
-                        System.out.println("Please only enter a positive number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
                 } else {
-                    if (0 >= number) {
-                        System.out.println("Please only enter a positive non-zero number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
                 }
             } else if (sign.equals(NEGATIVE)) {
-                if (includeZero) {
-                    if (0 < number) {
-                        System.out.println("Please only enter a negative number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
-                }
-                else{
-                    if (0 <= number) {
-                        System.out.println("Please only enter a negative non-zero number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
                 }
             }
         }
@@ -522,37 +484,18 @@ public class getVariable {
             int number = Integer.parseInt(input);
 
             if (sign.equals(POSITIVE)) {
-                if (includeZero) {
-                    if (0 > number) {
-                        System.out.println("Please only enter a positive whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
                 } else {
-                    if (0 >= number) {
-                        System.out.println("Please only enter a positive non-zero whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
                 }
             } else if (sign.equals(NEGATIVE)) {
-                if (includeZero) {
-                    if (0 < number) {
-                        System.out.println("Please only enter a negative whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
-                }
-                else{
-                    if (0 <= number) {
-                        System.out.println("Please only enter a negative non-zero whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
                 }
             }
         }
@@ -732,37 +675,18 @@ public class getVariable {
             long number = Long.parseLong(input);
 
             if (sign.equals(POSITIVE)) {
-                if (includeZero) {
-                    if (0 > number) {
-                        System.out.println("Please only enter a positive whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
                 } else {
-                    if (0 >= number) {
-                        System.out.println("Please only enter a positive non-zero whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
                 }
             } else if (sign.equals(NEGATIVE)) {
-                if (includeZero) {
-                    if (0 < number) {
-                        System.out.println("Please only enter a negative whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
-                }
-                else{
-                    if (0 <= number) {
-                        System.out.println("Please only enter a negative non-zero whole number.");
-                        System.out.println("Try again.");
-                    } else {
-                        return number;
-                    }
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
                 }
             }
         }
