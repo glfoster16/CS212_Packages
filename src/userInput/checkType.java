@@ -3,6 +3,8 @@ package userInput;
 /**
  * This class is used to check the type of a string
  * It has compatibility with doubles, floats, integers, and longs
+ * @author Gabriel Foster
+ * @version 1.0
  */
 public class checkType {
 

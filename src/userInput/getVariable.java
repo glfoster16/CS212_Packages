@@ -9,6 +9,8 @@ import java.util.Scanner;
  * Method parameters will always be in the order: promptText, lowerBound, upperBound, sign
  * Should you want to get a sign-checked variable without a prompt, enter null for promptText
  * and it will skip printing a line
+ * @author Gabriel Foster
+ * @version 1.0
  */
 public class getVariable {
 
@@ -74,7 +76,8 @@ public class getVariable {
     /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
-     * @param sign accepts "positive" or "negative", will only return doubles
+     * @param sign Accepts "positive" or "negative", will only return doubles
+     * @param includeZero True will include 0 in the checking, false will not
      * @return The input as a double
      */
     public static double getSafeDouble(String promptText, String sign, boolean includeZero){
@@ -283,7 +286,8 @@ public class getVariable {
     /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
-     * @param sign accepts "positive" or "negative", will only return floats
+     * @param sign Accepts "positive" or "negative", will only return floats
+     * @param includeZero True will include 0 in the checking, false will not
      * @return The input as a float
      */
     public static float getSafeFloat(String promptText, String sign, boolean includeZero){
@@ -492,7 +496,8 @@ public class getVariable {
     /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
-     * @param sign accepts "positive" or "negative", will only return integers
+     * @param sign Accepts "positive" or "negative", will only return integers
+     * @param includeZero True will include 0 in the checking, false will not
      * @return The input as an integer
      */
     public static int getSafeInt(String promptText, String sign, boolean includeZero){
@@ -701,7 +706,8 @@ public class getVariable {
     /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
-     * @param sign accepts "positive" or "negative", will only return longs
+     * @param sign Accepts "positive" or "negative", will only return longs
+     * @param includeZero True will include 0 in the checking, false will not
      * @return The input as a long
      */
     public static long getSafeLong(String promptText, String sign, boolean includeZero){
