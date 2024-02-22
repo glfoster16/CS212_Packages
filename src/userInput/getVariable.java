@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * This class is designed to help get input from the user. Method titles with "safe" in
  * then include type checking that will re-listen (or re-prompt if wished) to the command
- * line for the next input. These methods will never throw an error that crashes the program.
+ * line for the next input. These methods will never crash the program due to user input error.
  * Method titles without safe will simply listen for that type in the command line.
  * Method parameters will always be in the order: promptText, lowerBound, upperBound, sign
  * Should you want to get a sign-checked variable without a prompt, enter null for promptText
