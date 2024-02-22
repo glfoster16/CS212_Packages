@@ -317,7 +317,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a float
      */
-    public static float getSafeFloat(double lowerBound, double upperBound){
+    public static float getSafeFloat(float lowerBound, float upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -361,7 +361,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a float
      */
-    public static float getSafeFloat(String promptText, double lowerBound, double upperBound){
+    public static float getSafeFloat(String promptText, float lowerBound, float upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -701,7 +701,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a long
      */
-    public static long getSafeLong(int lowerBound, int upperBound){
+    public static long getSafeLong(long lowerBound, long upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -745,7 +745,7 @@ public class getVariable {
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a long
      */
-    public static long getSafeLong(String promptText, int lowerBound, int upperBound){
+    public static long getSafeLong(String promptText, long lowerBound, long upperBound){
         if (lowerBound > upperBound){
             throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
                     lowerBound + "' is greater than higher bound '" + upperBound +
@@ -800,7 +800,6 @@ public class getVariable {
     public static String getString(String promptText){
         Scanner scanner = new Scanner(System.in);
         System.out.println(promptText);
-
         return scanner.nextLine();
     }
 
