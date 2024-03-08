@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class getVariable {
 
-    public static String POSITIVE = "positive";
-    public static String NEGATIVE = "negative";
+    public final static String POSITIVE = "positive";
+    public final static String NEGATIVE = "negative";
 
     /**
      * Reads the next line from console
