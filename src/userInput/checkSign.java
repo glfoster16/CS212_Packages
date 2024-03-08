@@ -78,6 +78,23 @@ public class checkSign {
     }
 
     /**
+     * Determines if a short is positive
+     * @param number The short being checked for its sign
+     * @param includeZero A boolean which decides whether to include or exclude zero in the method's calculations
+     * @return True if number is positive, false if negative
+     */
+    public static boolean isPositive(short number, boolean includeZero){
+
+        if (includeZero){
+            return number >= 0;
+        }
+        else {
+            return number > 0;
+        }
+
+    }
+
+    /**
      * Determines if a double is negative
      * @param number The double being checked for its sign
      * @param includeZero A boolean which decides whether to include or exclude zero in the method's calculations
@@ -135,6 +152,23 @@ public class checkSign {
      * @return True if number is negative, false if positive
      */
     public static boolean isNegative(long number, boolean includeZero){
+
+        if (includeZero){
+            return number <= 0;
+        }
+        else {
+            return number < 0;
+        }
+
+    }
+
+    /**
+     * Determines if a short is negative
+     * @param number The short being checked for its sign
+     * @param includeZero A boolean which decides whether to include or exclude zero in the method's calculations
+     * @return True if number is negative, false if positive
+     */
+    public static boolean isNegative(short number, boolean includeZero){
 
         if (includeZero){
             return number <= 0;
