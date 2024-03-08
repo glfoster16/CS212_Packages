@@ -46,6 +46,17 @@ public class checkSign {
 
     }
 
+    public static boolean isPositive(short number, boolean includeZero){
+
+        if (includeZero){
+            return number >= 0;
+        }
+        else {
+            return number > 0;
+        }
+
+    }
+
     public static boolean isNegative(double number, boolean includeZero){
 
         if (includeZero){
@@ -80,6 +91,17 @@ public class checkSign {
     }
 
     public static boolean isNegative(long number, boolean includeZero){
+
+        if (includeZero){
+            return number <= 0;
+        }
+        else {
+            return number < 0;
+        }
+
+    }
+
+    public static boolean isNegative(short number, boolean includeZero){
 
         if (includeZero){
             return number <= 0;

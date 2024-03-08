@@ -631,7 +631,7 @@ public class getVariable {
      * Prints a prompt to the console and reads the next line from the console
      * Will only accept longs
      * @param promptText Will print this prompt to let the user know what to do
-     * @return The input as an integer
+     * @return The input as a long
      */
     public static long getSafeLong(String promptText){
         Scanner scanner = new Scanner(System.in);
@@ -767,6 +767,197 @@ public class getVariable {
             }
 
             long number = Long.parseLong(input);
+
+            if(number > upperBound || number < lowerBound){
+                System.out.println("Please only enter a whole number between " +
+                        lowerBound +" and " + upperBound + ".");
+                System.out.println("Try again.");
+            }
+            else {
+                return number;
+            }
+        }
+
+
+    }
+
+    /**
+     * Reads the next line from console
+     * @return The input as a short
+     */
+    public static long getShort(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextShort();
+    }
+
+    /**
+     * Prints a prompt to the console and reads the next line from the console
+     * @param promptText Will print this prompt to let the user know what to do
+     * @return The input as a short
+     */
+    public static long getShort(String promptText){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(promptText);
+
+        return scanner.nextShort();
+    }
+
+    /**
+     * Reads the next line from the console, will only accept shorts
+     * @return The input as a short
+     */
+    public static long getSafeShort(){
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        while (!checkType.isShort(input)){
+            System.out.println("Please only enter a whole number.");
+            System.out.println("Try again.");
+            input = scanner.nextLine();
+        }
+
+        return Short.parseShort(input);
+    }
+
+    /**
+     * Prints a prompt to the console and reads the next line from the console
+     * Will only accept shorts
+     * @param promptText Will print this prompt to let the user know what to do
+     * @return The input as a short
+     */
+    public static long getSafeShort(String promptText){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(promptText);
+        String input = scanner.nextLine();
+        while (!checkType.isShort(input)){
+            System.out.println("Please only enter a whole number.");
+            System.out.println("Try again.");
+            input = scanner.nextLine();
+        }
+
+        return Short.parseShort(input);
+    }
+
+    /**
+     * Prints a prompt to the console and reads the next line from the console
+     * @param promptText Will print this prompt to let the user know what to do
+     * @param sign Accepts "positive" or "negative", will only return longs
+     * @param includeZero True will include 0 in the checking, false will not
+     * @return The input as a short
+     */
+    public static long getSafeShort(String promptText, String sign, boolean includeZero){
+        if (!sign.equals(POSITIVE) && !sign.equals(NEGATIVE)){
+            throw new IllegalArgumentException("Unexpected token: '" + sign + "'" +
+                    "\n\nAccepted arguments are \"" + POSITIVE + "\" and \"" + NEGATIVE + "\"\n");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            if (promptText != null) {
+                System.out.println(promptText);
+            }
+            String input = scanner.nextLine();
+
+            while (!checkType.isShort(input)) {
+                System.out.println("Please only enter a " + sign + " whole number.");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            short number = Short.parseShort(input);
+
+            if (sign.equals(POSITIVE)) {
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
+                }
+            } else if (sign.equals(NEGATIVE)) {
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
+                }
+            }
+        }
+
+    }
+
+    /**
+     * Prints a prompt to the console and reads the next line from the console
+     * @param lowerBound Inclusive lower bound of accepted input
+     * @param upperBound Inclusive upper bound of accepted input
+     * @return The input as a short
+     */
+    public static long getSafeShort(short lowerBound, short upperBound){
+        if (lowerBound > upperBound){
+            throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
+                    lowerBound + "' is greater than higher bound '" + upperBound +
+                    "'.");
+        }
+        if (lowerBound == upperBound){
+            throw new IllegalArgumentException("Bounds collision. Lower bound '" +
+                    lowerBound + "' is equal to higher bound '" + upperBound +
+                    "'.");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String input = scanner.nextLine();
+            while (!checkType.isShort(input)) {
+                System.out.println("Please only enter a whole number between " +
+                        lowerBound +" and " + upperBound + ".");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            short number = Short.parseShort(input);
+
+            if(number > upperBound || number < lowerBound){
+                System.out.println("Please only enter a whole number between " +
+                        lowerBound +" and " + upperBound + ".");
+                System.out.println("Try again.");
+            }
+            else {
+                return number;
+            }
+        }
+
+
+    }
+
+    /**
+     * Prints a prompt to the console and reads the next line from the console
+     * @param promptText Will print this prompt to let the user know what to do
+     * @param lowerBound Inclusive lower bound of accepted input
+     * @param upperBound Inclusive upper bound of accepted input
+     * @return The input as a short
+     */
+    public static long getSafeShort(String promptText, short lowerBound, short upperBound){
+        if (lowerBound > upperBound){
+            throw new IllegalArgumentException("Bounds mismatch. Lower bound '" +
+                    lowerBound + "' is greater than higher bound '" + upperBound +
+                    "'.");
+        }
+        if (lowerBound == upperBound){
+            throw new IllegalArgumentException("Bounds collision. Lower bound '" +
+                    lowerBound + "' is equal to higher bound '" + upperBound +
+                    "'.");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println(promptText);
+            String input = scanner.nextLine();
+            while (!checkType.isShort(input)) {
+                System.out.println("Please only enter a whole number between " +
+                        lowerBound +" and " + upperBound + ".");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            short number = Short.parseShort(input);
 
             if(number > upperBound || number < lowerBound){
                 System.out.println("Please only enter a whole number between " +

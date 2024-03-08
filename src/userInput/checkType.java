@@ -65,5 +65,19 @@ public class checkType {
         }
     }
 
+    /**
+     * Checks if a string is a short
+     * @param input The string being checked if it is a short or not
+     * @return true if input is a short, false if input is not a short
+     */
+    public static boolean isShort(String input){
+        try {
+            float test = Short.parseShort(input);
+            return true;
+        } catch (NumberFormatException e){
+            return false;
+        }
+    }
+
 
 }
