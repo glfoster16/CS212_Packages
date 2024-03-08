@@ -14,3 +14,8 @@ The methods in this package allow for a single line to:
 * Check bounds on an inputted number
 * Check sign of a number
   * Optional inclusion/exclusion of 0
+
+# Rights
+Anyone is free to use this whenever, for whatever purpose, and
+as much as they would like. I have shared this with my professor to distribute to my peers
+if he wishes.
