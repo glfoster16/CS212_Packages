@@ -15,6 +15,12 @@ The methods in this package allow for a single line to:
 * Check sign of a number
   * Optional inclusion/exclusion of 0
 
+
+Each call to a method does create a new scanner object
+from the java.util.scanner class without freeing that memory. 
+However, the JVM frees the memory during its garbage collection
+processes.
+
 # Rights
 Anyone is free to use this whenever, for whatever purpose, and
 as much as they would like. I have shared this with my professor to distribute to my peers
