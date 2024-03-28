@@ -74,6 +74,49 @@ public class getVariable {
     }
 
     /**
+     * Reads the next line from the console
+     * @param sign Accepts "positive" or "negative", will only return doubles
+     * @param includeZero True will include 0 in the checking, false will not
+     * @return The input as a double
+     */
+    public static double getSafeDouble(String sign, boolean includeZero){
+        if (!sign.equals(POSITIVE) && !sign.equals(NEGATIVE)){
+            throw new IllegalArgumentException("Unexpected token: '" + sign + "'" +
+                    "\n\nAccepted arguments are \"" + POSITIVE + "\" and \"" + NEGATIVE + "\"\n");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            String input = scanner.nextLine();
+
+            while (!checkType.isDouble(input)) {
+                System.out.println("Please only enter a " + sign + " number.");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            double number = Double.parseDouble(input);
+
+            if (sign.equals(POSITIVE)) {
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
+                }
+            } else if (sign.equals(NEGATIVE)) {
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
+                }
+            }
+        }
+
+    }
+
+    /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
      * @param sign Accepts "positive" or "negative", will only return doubles
@@ -121,7 +164,7 @@ public class getVariable {
     }
 
     /**
-     * Prints a prompt to the console and reads the next line from the console
+     * Reads the next line from the console
      * @param lowerBound Inclusive lower bound of accepted input
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a double
@@ -265,6 +308,49 @@ public class getVariable {
     }
 
     /**
+     * Reads the next line from the console
+     * @param sign Accepts "positive" or "negative", will only return floats
+     * @param includeZero True will include 0 in the checking, false will not
+     * @return The input as a float
+     */
+    public static float getSafeFloat(String sign, boolean includeZero){
+        if (!sign.equals(POSITIVE) && !sign.equals(NEGATIVE)){
+            throw new IllegalArgumentException("Unexpected token: '" + sign + "'" +
+                    "\n\nAccepted arguments are \"" + POSITIVE + "\" and \"" + NEGATIVE + "\"\n");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            String input = scanner.nextLine();
+
+            while (!checkType.isFloat(input)) {
+                System.out.println("Please only enter a " + sign + " number.");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            float number = Float.parseFloat(input);
+
+            if (sign.equals(POSITIVE)) {
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a positive number.");
+                    System.out.println("Try again.");
+                }
+            } else if (sign.equals(NEGATIVE)) {
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative number.");
+                    System.out.println("Try again.");
+                }
+            }
+        }
+
+    }
+
+    /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
      * @param sign Accepts "positive" or "negative", will only return floats
@@ -312,7 +398,7 @@ public class getVariable {
     }
 
     /**
-     * Prints a prompt to the console and reads the next line from the console
+     * Reads the next line from the console
      * @param lowerBound Inclusive lower bound of accepted input
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a float
@@ -456,6 +542,49 @@ public class getVariable {
     }
 
     /**
+     * Reads the next line from the console
+     * @param sign Accepts "positive" or "negative", will only return integers
+     * @param includeZero True will include 0 in the checking, false will not
+     * @return The input as an integer
+     */
+    public static int getSafeInt(String sign, boolean includeZero){
+        if (!sign.equals(POSITIVE) && !sign.equals(NEGATIVE)){
+            throw new IllegalArgumentException("Unexpected token: '" + sign + "'" +
+                    "\n\nAccepted arguments are \"" + POSITIVE + "\" and \"" + NEGATIVE + "\"\n");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            String input = scanner.nextLine();
+
+            while (!checkType.isInt(input)) {
+                System.out.println("Please only enter a " + sign + " whole number.");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            int number = Integer.parseInt(input);
+
+            if (sign.equals(POSITIVE)) {
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a positive whole number.");
+                    System.out.println("Try again.");
+                }
+            } else if (sign.equals(NEGATIVE)) {
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative whole number.");
+                    System.out.println("Try again.");
+                }
+            }
+        }
+
+    }
+
+    /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
      * @param sign Accepts "positive" or "negative", will only return integers
@@ -503,7 +632,7 @@ public class getVariable {
     }
 
     /**
-     * Prints a prompt to the console and reads the next line from the console
+     * Reads the next line from the console
      * @param lowerBound Inclusive lower bound of accepted input
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as an integer
@@ -647,6 +776,49 @@ public class getVariable {
     }
 
     /**
+     * Reads the next line from the console
+     * @param sign Accepts "positive" or "negative", will only return longs
+     * @param includeZero True will include 0 in the checking, false will not
+     * @return The input as a long
+     */
+    public static long getSafeLong(String sign, boolean includeZero){
+        if (!sign.equals(POSITIVE) && !sign.equals(NEGATIVE)){
+            throw new IllegalArgumentException("Unexpected token: '" + sign + "'" +
+                    "\n\nAccepted arguments are \"" + POSITIVE + "\" and \"" + NEGATIVE + "\"\n");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            String input = scanner.nextLine();
+
+            while (!checkType.isLong(input)) {
+                System.out.println("Please only enter a " + sign + " whole number.");
+                System.out.println("Try again.");
+                input = scanner.nextLine();
+            }
+
+            long number = Long.parseLong(input);
+
+            if (sign.equals(POSITIVE)) {
+                if (checkSign.isPositive(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a positive whole number.");
+                    System.out.println("Try again.");
+                }
+            } else if (sign.equals(NEGATIVE)) {
+                if (checkSign.isNegative(number, includeZero)){
+                    return number;
+                } else {
+                    System.out.println("Please only enter a negative whole number.");
+                    System.out.println("Try again.");
+                }
+            }
+        }
+
+    }
+
+    /**
      * Prints a prompt to the console and reads the next line from the console
      * @param promptText Will print this prompt to let the user know what to do
      * @param sign Accepts "positive" or "negative", will only return longs
@@ -694,7 +866,7 @@ public class getVariable {
     }
 
     /**
-     * Prints a prompt to the console and reads the next line from the console
+     * Reads the next line from the console
      * @param lowerBound Inclusive lower bound of accepted input
      * @param upperBound Inclusive upper bound of accepted input
      * @return The input as a long
